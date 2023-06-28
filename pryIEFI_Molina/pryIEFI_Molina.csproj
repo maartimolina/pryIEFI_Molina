@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmBienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBienvenida.Designer.cs">
+      <DependentUpon>frmBienvenida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCargarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCargarProductos.Designer.cs">
+      <DependentUpon>frmCargarProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCargarVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCargarVentas.Designer.cs">
+      <DependentUpon>frmCargarVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +72,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBienvenida.resx">
+      <DependentUpon>frmBienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCargarProductos.resx">
+      <DependentUpon>frmCargarProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCargarVentas.resx">
+      <DependentUpon>frmCargarVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
