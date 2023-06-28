@@ -16,5 +16,15 @@ namespace pryIEFI_Molina
         {
             InitializeComponent();
         }
+
+        private void Registro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
