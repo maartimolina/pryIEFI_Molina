@@ -32,8 +32,8 @@ namespace pryIEFI_Molina
             varNombre=txtNombre.Text;
 
             matrizProductos[indiceFila,0] = varID;
-            matrizProductos[indiceFila,0]= varNombre;
-            matrizProductos[indiceFila, 0] = varFecha;
+            matrizProductos[indiceFila,1]= varNombre;
+            matrizProductos[indiceFila, 2] = varFecha;
             MessageBox.Show(matrizProductos[indiceFila,1] + "Se agrego correctamente.");
             indiceFila++;
 
@@ -57,6 +57,11 @@ namespace pryIEFI_Molina
         {
             frmListado ventanaListado= new frmListado("Productos", matrizProductos);
             ventanaListado.ShowDialog();
+
+        }
+
+        private void frmCargarProductos_Load(object sender, EventArgs e)
+        {
 
         }
     }

@@ -28,20 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListado));
+            this.lstProductos = new System.Windows.Forms.ListBox();
+            this.lstVentas = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
+            // 
+            // lstProductos
+            // 
+            this.lstProductos.FormattingEnabled = true;
+            this.lstProductos.Location = new System.Drawing.Point(2, 2);
+            this.lstProductos.Name = "lstProductos";
+            this.lstProductos.Size = new System.Drawing.Size(291, 355);
+            this.lstProductos.TabIndex = 0;
+            // 
+            // lstVentas
+            // 
+            this.lstVentas.FormattingEnabled = true;
+            this.lstVentas.Location = new System.Drawing.Point(297, 2);
+            this.lstVentas.Name = "lstVentas";
+            this.lstVentas.Size = new System.Drawing.Size(291, 355);
+            this.lstVentas.TabIndex = 1;
             // 
             // frmListado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(596, 358);
+            this.Controls.Add(this.lstVentas);
+            this.Controls.Add(this.lstProductos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmListado";
-            this.Text = "frmListado";
+            this.Text = "Listado";
             this.Load += new System.EventHandler(this.frmListado_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.ListBox lstProductos;
+        private System.Windows.Forms.ListBox lstVentas;
     }
 }

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCargarProductos));
             this.tabcCargarProductos = new System.Windows.Forms.TabControl();
             this.Registro = new System.Windows.Forms.TabPage();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.gbProductos = new System.Windows.Forms.GroupBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -38,13 +39,12 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
+            this.btnCargar = new System.Windows.Forms.Button();
             this.Consulta = new System.Windows.Forms.TabPage();
             this.dgvConsulta = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCargar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnListado = new System.Windows.Forms.Button();
             this.tabcCargarProductos.SuspendLayout();
             this.Registro.SuspendLayout();
@@ -60,10 +60,11 @@
             this.tabcCargarProductos.Controls.Add(this.Registro);
             this.tabcCargarProductos.Controls.Add(this.Consulta);
             this.tabcCargarProductos.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabcCargarProductos.Location = new System.Drawing.Point(6, 24);
+            this.tabcCargarProductos.Location = new System.Drawing.Point(4, 20);
+            this.tabcCargarProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabcCargarProductos.Name = "tabcCargarProductos";
             this.tabcCargarProductos.SelectedIndex = 0;
-            this.tabcCargarProductos.Size = new System.Drawing.Size(438, 393);
+            this.tabcCargarProductos.Size = new System.Drawing.Size(342, 319);
             this.tabcCargarProductos.TabIndex = 0;
             // 
             // Registro
@@ -72,14 +73,27 @@
             this.Registro.Controls.Add(this.gbProductos);
             this.Registro.Controls.Add(this.btnCargar);
             this.Registro.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registro.Location = new System.Drawing.Point(4, 34);
+            this.Registro.Location = new System.Drawing.Point(4, 27);
+            this.Registro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Registro.Name = "Registro";
-            this.Registro.Padding = new System.Windows.Forms.Padding(3);
-            this.Registro.Size = new System.Drawing.Size(430, 355);
+            this.Registro.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Registro.Size = new System.Drawing.Size(334, 288);
             this.Registro.TabIndex = 0;
             this.Registro.Text = "Registro";
             this.Registro.UseVisualStyleBackColor = true;
             this.Registro.Click += new System.EventHandler(this.Registro_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(49, 245);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(90, 37);
+            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // gbProductos
             // 
@@ -90,41 +104,47 @@
             this.gbProductos.Controls.Add(this.lblNombre);
             this.gbProductos.Controls.Add(this.lblID);
             this.gbProductos.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbProductos.Location = new System.Drawing.Point(6, 6);
+            this.gbProductos.Location = new System.Drawing.Point(4, 5);
+            this.gbProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbProductos.Name = "gbProductos";
-            this.gbProductos.Size = new System.Drawing.Size(428, 289);
+            this.gbProductos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbProductos.Size = new System.Drawing.Size(321, 235);
             this.gbProductos.TabIndex = 0;
             this.gbProductos.TabStop = false;
             this.gbProductos.Text = "Productos";
             // 
             // dtpFecha
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(11, 234);
+            this.dtpFecha.Location = new System.Drawing.Point(8, 190);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(402, 32);
+            this.dtpFecha.Size = new System.Drawing.Size(302, 27);
             this.dtpFecha.TabIndex = 3;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(11, 146);
+            this.txtNombre.Location = new System.Drawing.Point(8, 119);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(203, 32);
+            this.txtNombre.Size = new System.Drawing.Size(153, 27);
             this.txtNombre.TabIndex = 1;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(11, 71);
+            this.txtID.Location = new System.Drawing.Point(8, 58);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(203, 32);
+            this.txtID.Size = new System.Drawing.Size(153, 27);
             this.txtID.TabIndex = 0;
             // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(11, 197);
+            this.lblFecha.Location = new System.Drawing.Point(8, 160);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(202, 25);
+            this.lblFecha.Size = new System.Drawing.Size(164, 18);
             this.lblFecha.TabIndex = 3;
             this.lblFecha.Text = "Fecha de Registros";
             // 
@@ -132,9 +152,10 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(11, 108);
+            this.lblNombre.Location = new System.Drawing.Point(8, 88);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(91, 25);
+            this.lblNombre.Size = new System.Drawing.Size(71, 18);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Nombre";
             // 
@@ -142,20 +163,34 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(11, 43);
+            this.lblID.Location = new System.Drawing.Point(8, 35);
+            this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(35, 25);
+            this.lblID.Size = new System.Drawing.Size(27, 18);
             this.lblID.TabIndex = 0;
             this.lblID.Text = "ID";
+            // 
+            // btnCargar
+            // 
+            this.btnCargar.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargar.Location = new System.Drawing.Point(180, 245);
+            this.btnCargar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(90, 37);
+            this.btnCargar.TabIndex = 0;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // Consulta
             // 
             this.Consulta.Controls.Add(this.dgvConsulta);
             this.Consulta.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Consulta.Location = new System.Drawing.Point(4, 34);
+            this.Consulta.Location = new System.Drawing.Point(4, 27);
+            this.Consulta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Consulta.Name = "Consulta";
-            this.Consulta.Padding = new System.Windows.Forms.Padding(3);
-            this.Consulta.Size = new System.Drawing.Size(430, 323);
+            this.Consulta.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Consulta.Size = new System.Drawing.Size(334, 288);
             this.Consulta.TabIndex = 1;
             this.Consulta.Text = "Consulta";
             this.Consulta.UseVisualStyleBackColor = true;
@@ -169,11 +204,12 @@
             this.ID,
             this.Nombre,
             this.Fecha});
-            this.dgvConsulta.Location = new System.Drawing.Point(-2, 3);
+            this.dgvConsulta.Location = new System.Drawing.Point(-2, 2);
+            this.dgvConsulta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvConsulta.Name = "dgvConsulta";
             this.dgvConsulta.RowHeadersWidth = 51;
             this.dgvConsulta.RowTemplate.Height = 24;
-            this.dgvConsulta.Size = new System.Drawing.Size(445, 324);
+            this.dgvConsulta.Size = new System.Drawing.Size(334, 263);
             this.dgvConsulta.TabIndex = 0;
             // 
             // ID
@@ -194,34 +230,13 @@
             this.Fecha.MinimumWidth = 6;
             this.Fecha.Name = "Fecha";
             // 
-            // btnCargar
-            // 
-            this.btnCargar.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargar.Location = new System.Drawing.Point(240, 301);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(120, 45);
-            this.btnCargar.TabIndex = 0;
-            this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = true;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(65, 301);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(120, 45);
-            this.btnCancelar.TabIndex = 1;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // btnListado
             // 
             this.btnListado.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListado.Location = new System.Drawing.Point(170, 423);
+            this.btnListado.Location = new System.Drawing.Point(128, 344);
+            this.btnListado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnListado.Name = "btnListado";
-            this.btnListado.Size = new System.Drawing.Size(108, 44);
+            this.btnListado.Size = new System.Drawing.Size(81, 36);
             this.btnListado.TabIndex = 1;
             this.btnListado.Text = "Listado";
             this.btnListado.UseVisualStyleBackColor = true;
@@ -229,15 +244,17 @@
             // 
             // frmCargarProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 482);
+            this.ClientSize = new System.Drawing.Size(347, 392);
             this.Controls.Add(this.btnListado);
             this.Controls.Add(this.tabcCargarProductos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmCargarProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cargar Productos";
+            this.Load += new System.EventHandler(this.frmCargarProductos_Load);
             this.tabcCargarProductos.ResumeLayout(false);
             this.Registro.ResumeLayout(false);
             this.gbProductos.ResumeLayout(false);

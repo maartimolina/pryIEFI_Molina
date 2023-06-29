@@ -12,6 +12,8 @@ namespace pryIEFI_Molina
 {
     public partial class frmCargarVentas : Form
     {
+        string[,] matrizVentas = new string[20, 4];
+        int indiceFila=0;
         public frmCargarVentas()
         {
             InitializeComponent();
@@ -19,14 +21,44 @@ namespace pryIEFI_Molina
 
         private void frmCargarVentas_Load(object sender, EventArgs e)
         {
+           
+        }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            string varID, varProducto;
+            int varCantidad;
+            string varFecha = dtpFecha.Value.ToString("dd/MM/yyyy");
+            varID = txtID.Text; 
+            varProducto = txtProducto.Text;
+            varCantidad =  Convert.ToInt32(nudCantidad.Value);
+           
+            matrizVentas[indiceFila, 0] = varID;
+            matrizVentas[indiceFila, 1] = varProducto;
+            matrizVentas[indiceFila, 2] = varCantidad.ToString();
+            matrizVentas[indiceFila, 3] = varFecha;
+            MessageBox.Show(matrizVentas[indiceFila, 1] + "Se agrego correctamente.");
+            indiceFila++;
+
+            dgvConsulta.Rows.Clear();
+            for (int f = 0; f < matrizVentas.GetLength(0); f++)
+            {
+                dgvConsulta.Rows.Add(matrizVentas[f, 0], matrizVentas[f, 1], matrizVentas[f, 2], matrizVentas[f,3]);
+            }
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
             frmBienvenida ventaBienvenida = new frmBienvenida();
             ventaBienvenida.ShowDialog();
             this.Hide();
         }
 
-        private void btnCargar_Click(object sender, EventArgs e)
+        private void btnListado_Click(object sender, EventArgs e)
         {
-
+            frmListado ventanaListado = new frmListado("Ventas",matrizVentas);
+            ventanaListado.ShowDialog();
         }
     }
 }
