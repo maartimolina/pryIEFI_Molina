@@ -16,5 +16,17 @@ namespace pryIEFI_Molina
         {
             InitializeComponent();
         }
+
+        private void frmCargarVentas_Load(object sender, EventArgs e)
+        {
+            frmBienvenida ventaBienvenida = new frmBienvenida();
+            ventaBienvenida.ShowDialog();
+            this.Hide();
+        }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -12,6 +12,8 @@ namespace pryIEFI_Molina
 {
     public partial class frmCargarProductos : Form
     {
+        string[,] matrizProductos = new string[20, 3];
+        int indiceFila = 0;
         public frmCargarProductos()
         {
             InitializeComponent();
@@ -24,7 +26,31 @@ namespace pryIEFI_Molina
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
+            string varID, varNombre;
+            string varFecha = dtpFecha.Value.ToString("dd/MM/yyyy");
+            varID = txtID.Text;
+            varNombre=txtNombre.Text;
 
+            matrizProductos[indiceFila,0] = varID;
+            matrizProductos[indiceFila,0]= varNombre;
+            matrizProductos[indiceFila, 0] = varFecha;
+            MessageBox.Show(matrizProductos[indiceFila,1] + "Se agrego correctamente.");
+            indiceFila++;
+
+            dgvConsulta.Rows.Clear();
+            for (int f = 0; f < matrizProductos.GetLength(0); f++)
+            {
+                dgvConsulta.Rows.Add(matrizProductos[f, 0], matrizProductos[f, 1], matrizProductos[f, 2]);
+            }
+
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            frmBienvenida ventaBienvenida = new frmBienvenida();
+            ventaBienvenida.ShowDialog();
+            this.Hide();
         }
     }
 }

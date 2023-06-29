@@ -48,6 +48,7 @@
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnListado = new System.Windows.Forms.Button();
             this.tabcCargarVentas.SuspendLayout();
             this.Registro.SuspendLayout();
             this.gbVentas.SuspendLayout();
@@ -59,7 +60,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(111, 437);
+            this.btnCancelar.Location = new System.Drawing.Point(95, 367);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(120, 45);
             this.btnCancelar.TabIndex = 0;
@@ -69,12 +70,13 @@
             // btnCargar
             // 
             this.btnCargar.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargar.Location = new System.Drawing.Point(319, 437);
+            this.btnCargar.Location = new System.Drawing.Point(314, 368);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(120, 45);
             this.btnCargar.TabIndex = 1;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // tabcCargarVentas
             // 
@@ -86,17 +88,19 @@
             this.tabcCargarVentas.Location = new System.Drawing.Point(12, 12);
             this.tabcCargarVentas.Name = "tabcCargarVentas";
             this.tabcCargarVentas.SelectedIndex = 0;
-            this.tabcCargarVentas.Size = new System.Drawing.Size(564, 406);
+            this.tabcCargarVentas.Size = new System.Drawing.Size(564, 457);
             this.tabcCargarVentas.TabIndex = 3;
             // 
             // Registro
             // 
+            this.Registro.Controls.Add(this.btnCancelar);
             this.Registro.Controls.Add(this.gbVentas);
+            this.Registro.Controls.Add(this.btnCargar);
             this.Registro.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Registro.Location = new System.Drawing.Point(4, 34);
             this.Registro.Name = "Registro";
             this.Registro.Padding = new System.Windows.Forms.Padding(3);
-            this.Registro.Size = new System.Drawing.Size(556, 368);
+            this.Registro.Size = new System.Drawing.Size(556, 419);
             this.Registro.TabIndex = 0;
             this.Registro.Text = "Registro";
             this.Registro.UseVisualStyleBackColor = true;
@@ -129,9 +133,19 @@
             // lstCantidad
             // 
             this.lstCantidad.Location = new System.Drawing.Point(6, 227);
+            this.lstCantidad.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.lstCantidad.Name = "lstCantidad";
             this.lstCantidad.Size = new System.Drawing.Size(166, 32);
             this.lstCantidad.TabIndex = 2;
+            this.lstCantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // txtProducto
             // 
@@ -194,13 +208,15 @@
             this.Consulta.Location = new System.Drawing.Point(4, 34);
             this.Consulta.Name = "Consulta";
             this.Consulta.Padding = new System.Windows.Forms.Padding(3);
-            this.Consulta.Size = new System.Drawing.Size(556, 368);
+            this.Consulta.Size = new System.Drawing.Size(556, 419);
             this.Consulta.TabIndex = 1;
             this.Consulta.Text = "Consulta";
             this.Consulta.UseVisualStyleBackColor = true;
             // 
             // dgvConsulta
             // 
+            this.dgvConsulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvConsulta.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsulta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -211,7 +227,7 @@
             this.dgvConsulta.Name = "dgvConsulta";
             this.dgvConsulta.RowHeadersWidth = 51;
             this.dgvConsulta.RowTemplate.Height = 24;
-            this.dgvConsulta.Size = new System.Drawing.Size(552, 365);
+            this.dgvConsulta.Size = new System.Drawing.Size(552, 416);
             this.dgvConsulta.TabIndex = 0;
             // 
             // ID
@@ -219,40 +235,47 @@
             this.ID.HeaderText = "ID";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
-            this.ID.Width = 125;
             // 
             // Producto
             // 
             this.Producto.HeaderText = "Producto";
             this.Producto.MinimumWidth = 6;
             this.Producto.Name = "Producto";
-            this.Producto.Width = 125;
             // 
             // Cantidad
             // 
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.MinimumWidth = 6;
             this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 125;
             // 
             // Fecha
             // 
             this.Fecha.HeaderText = "Fecha";
             this.Fecha.MinimumWidth = 6;
             this.Fecha.Name = "Fecha";
-            this.Fecha.Width = 125;
+            // 
+            // btnListado
+            // 
+            this.btnListado.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListado.Location = new System.Drawing.Point(210, 485);
+            this.btnListado.Name = "btnListado";
+            this.btnListado.Size = new System.Drawing.Size(124, 40);
+            this.btnListado.TabIndex = 4;
+            this.btnListado.Text = "Listado";
+            this.btnListado.UseVisualStyleBackColor = true;
             // 
             // frmCargarVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(578, 493);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnCargar);
+            this.ClientSize = new System.Drawing.Size(578, 537);
+            this.Controls.Add(this.btnListado);
             this.Controls.Add(this.tabcCargarVentas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCargarVentas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cargar Ventas";
+            this.Load += new System.EventHandler(this.frmCargarVentas_Load);
             this.tabcCargarVentas.ResumeLayout(false);
             this.Registro.ResumeLayout(false);
             this.gbVentas.ResumeLayout(false);
@@ -285,5 +308,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.Button btnListado;
     }
 }
