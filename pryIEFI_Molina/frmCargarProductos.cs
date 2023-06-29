@@ -52,5 +52,12 @@ namespace pryIEFI_Molina
             ventaBienvenida.ShowDialog();
             this.Hide();
         }
+
+        private void btnListado_Click(object sender, EventArgs e)
+        {
+            frmListado ventanaListado= new frmListado("Productos", matrizProductos);
+            ventanaListado.ShowDialog();
+
+        }
     }
 }

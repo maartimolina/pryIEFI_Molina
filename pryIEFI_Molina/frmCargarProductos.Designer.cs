@@ -225,6 +225,7 @@
             this.btnListado.TabIndex = 1;
             this.btnListado.Text = "Listado";
             this.btnListado.UseVisualStyleBackColor = true;
+            this.btnListado.Click += new System.EventHandler(this.btnListado_Click);
             // 
             // frmCargarProductos
             // 
