@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCargarProductos));
             this.tabcCargarProductos = new System.Windows.Forms.TabControl();
             this.Registro = new System.Windows.Forms.TabPage();
-            this.Consulta = new System.Windows.Forms.TabPage();
             this.gbProductos = new System.Windows.Forms.GroupBox();
-            this.lblID = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.txtProducto = new System.Windows.Forms.TextBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.btnCargar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtProducto = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
+            this.Consulta = new System.Windows.Forms.TabPage();
             this.dgvConsulta = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCargar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.tabcCargarProductos.SuspendLayout();
             this.Registro.SuspendLayout();
-            this.Consulta.SuspendLayout();
             this.gbProductos.SuspendLayout();
+            this.Consulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,18 +78,6 @@
             this.Registro.UseVisualStyleBackColor = true;
             this.Registro.Click += new System.EventHandler(this.Registro_Click);
             // 
-            // Consulta
-            // 
-            this.Consulta.Controls.Add(this.dgvConsulta);
-            this.Consulta.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Consulta.Location = new System.Drawing.Point(4, 34);
-            this.Consulta.Name = "Consulta";
-            this.Consulta.Padding = new System.Windows.Forms.Padding(3);
-            this.Consulta.Size = new System.Drawing.Size(430, 323);
-            this.Consulta.TabIndex = 1;
-            this.Consulta.Text = "Consulta";
-            this.Consulta.UseVisualStyleBackColor = true;
-            // 
             // gbProductos
             // 
             this.gbProductos.Controls.Add(this.dtpFecha);
@@ -105,25 +94,26 @@
             this.gbProductos.TabStop = false;
             this.gbProductos.Text = "Productos";
             // 
-            // lblID
+            // dtpFecha
             // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(11, 43);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(35, 25);
-            this.lblID.TabIndex = 0;
-            this.lblID.Text = "ID";
+            this.dtpFecha.Location = new System.Drawing.Point(11, 234);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(402, 32);
+            this.dtpFecha.TabIndex = 3;
             // 
-            // lblNombre
+            // txtProducto
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(11, 108);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(91, 25);
-            this.lblNombre.TabIndex = 2;
-            this.lblNombre.Text = "Nombre";
+            this.txtProducto.Location = new System.Drawing.Point(11, 146);
+            this.txtProducto.Name = "txtProducto";
+            this.txtProducto.Size = new System.Drawing.Size(203, 32);
+            this.txtProducto.TabIndex = 1;
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(11, 71);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(203, 32);
+            this.txtID.TabIndex = 0;
             // 
             // lblFecha
             // 
@@ -135,47 +125,37 @@
             this.lblFecha.TabIndex = 3;
             this.lblFecha.Text = "Fecha de Registros";
             // 
-            // txtID
+            // lblNombre
             // 
-            this.txtID.Location = new System.Drawing.Point(11, 71);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(203, 32);
-            this.txtID.TabIndex = 0;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(11, 108);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(91, 25);
+            this.lblNombre.TabIndex = 2;
+            this.lblNombre.Text = "Nombre";
             // 
-            // txtProducto
+            // lblID
             // 
-            this.txtProducto.Location = new System.Drawing.Point(11, 146);
-            this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(203, 32);
-            this.txtProducto.TabIndex = 1;
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(11, 43);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(35, 25);
+            this.lblID.TabIndex = 0;
+            this.lblID.Text = "ID";
             // 
-            // dtpFecha
+            // Consulta
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(11, 234);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(402, 32);
-            this.dtpFecha.TabIndex = 3;
-            // 
-            // btnCargar
-            // 
-            this.btnCargar.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargar.Location = new System.Drawing.Point(251, 387);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(120, 45);
-            this.btnCargar.TabIndex = 0;
-            this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = true;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(63, 387);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(120, 45);
-            this.btnCancelar.TabIndex = 1;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.Consulta.Controls.Add(this.dgvConsulta);
+            this.Consulta.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Consulta.Location = new System.Drawing.Point(4, 34);
+            this.Consulta.Name = "Consulta";
+            this.Consulta.Padding = new System.Windows.Forms.Padding(3);
+            this.Consulta.Size = new System.Drawing.Size(430, 323);
+            this.Consulta.TabIndex = 1;
+            this.Consulta.Text = "Consulta";
+            this.Consulta.UseVisualStyleBackColor = true;
             // 
             // dgvConsulta
             // 
@@ -212,6 +192,27 @@
             this.Fecha.Name = "Fecha";
             this.Fecha.Width = 125;
             // 
+            // btnCargar
+            // 
+            this.btnCargar.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargar.Location = new System.Drawing.Point(251, 387);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(120, 45);
+            this.btnCargar.TabIndex = 0;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(63, 387);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(120, 45);
+            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
             // frmCargarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -220,13 +221,14 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.tabcCargarProductos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCargarProductos";
             this.Text = "Cargar Productos";
             this.tabcCargarProductos.ResumeLayout(false);
             this.Registro.ResumeLayout(false);
-            this.Consulta.ResumeLayout(false);
             this.gbProductos.ResumeLayout(false);
             this.gbProductos.PerformLayout();
+            this.Consulta.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).EndInit();
             this.ResumeLayout(false);
 
