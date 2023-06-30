@@ -60,5 +60,34 @@ namespace pryIEFI_Molina
             frmListado ventanaListado = new frmListado("Ventas",matrizVentas);
             ventanaListado.ShowDialog();
         }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            dgvConsulta.Rows.Clear();
+            string varProducto;
+            varProducto = txtProducto.Text;
+            
+            varProducto = txtFiltrar.Text;
+            if (optCantidad.Checked)
+            {
+                for (int f = 0; f < matrizVentas.GetLength(0); f++)
+                {
+                    if (matrizVentas[f, 2] != null && int.Parse(matrizVentas[f, 2]) > 5)
+                    {
+                        dgvConsulta.Rows.Add(matrizVentas[f, 0], matrizVentas[f, 1], matrizVentas[f, 2], matrizVentas[f, 3]);
+                    }
+                }
+            }
+            else if (optProducto.Checked)
+            {
+                for (int f = 0; f < matrizVentas.GetLength(0); f++)
+                {
+                    if (matrizVentas[f, 1] != null && matrizVentas[f, 1] == varProducto)
+                    {
+                        dgvConsulta.Rows.Add(matrizVentas[f, 0], matrizVentas[f, 1], matrizVentas[f, 2], matrizVentas[f, 3]);
+                    }
+                }
+            }
+        }
     }
 }
