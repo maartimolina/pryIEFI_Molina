@@ -49,12 +49,19 @@
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnListado = new System.Windows.Forms.Button();
+            this.Filtros = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnFiltrar = new System.Windows.Forms.TextBox();
+            this.optProducto = new System.Windows.Forms.RadioButton();
+            this.btnCantidad = new System.Windows.Forms.RadioButton();
             this.tabcCargarVentas.SuspendLayout();
             this.Registro.SuspendLayout();
             this.gbVentas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.Consulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).BeginInit();
+            this.Filtros.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -87,6 +94,7 @@
             this.tabcCargarVentas.AccessibleName = "";
             this.tabcCargarVentas.Controls.Add(this.Registro);
             this.tabcCargarVentas.Controls.Add(this.Consulta);
+            this.tabcCargarVentas.Controls.Add(this.Filtros);
             this.tabcCargarVentas.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabcCargarVentas.Location = new System.Drawing.Point(9, 10);
             this.tabcCargarVentas.Margin = new System.Windows.Forms.Padding(2);
@@ -283,6 +291,58 @@
             this.btnListado.UseVisualStyleBackColor = true;
             this.btnListado.Click += new System.EventHandler(this.btnListado_Click);
             // 
+            // Filtros
+            // 
+            this.Filtros.Controls.Add(this.groupBox1);
+            this.Filtros.Location = new System.Drawing.Point(4, 27);
+            this.Filtros.Name = "Filtros";
+            this.Filtros.Padding = new System.Windows.Forms.Padding(3);
+            this.Filtros.Size = new System.Drawing.Size(450, 340);
+            this.Filtros.TabIndex = 2;
+            this.Filtros.Text = "Filtros";
+            this.Filtros.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnCantidad);
+            this.groupBox1.Controls.Add(this.optProducto);
+            this.groupBox1.Controls.Add(this.btnFiltrar);
+            this.groupBox1.Location = new System.Drawing.Point(6, 17);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(438, 295);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Filtros";
+            // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Location = new System.Drawing.Point(70, 211);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(299, 27);
+            this.btnFiltrar.TabIndex = 0;
+            // 
+            // optProducto
+            // 
+            this.optProducto.AutoSize = true;
+            this.optProducto.Location = new System.Drawing.Point(263, 107);
+            this.optProducto.Name = "optProducto";
+            this.optProducto.Size = new System.Drawing.Size(106, 22);
+            this.optProducto.TabIndex = 1;
+            this.optProducto.TabStop = true;
+            this.optProducto.Text = "Producto";
+            this.optProducto.UseVisualStyleBackColor = true;
+            // 
+            // btnCantidad
+            // 
+            this.btnCantidad.AutoSize = true;
+            this.btnCantidad.Location = new System.Drawing.Point(70, 107);
+            this.btnCantidad.Name = "btnCantidad";
+            this.btnCantidad.Size = new System.Drawing.Size(104, 22);
+            this.btnCantidad.TabIndex = 2;
+            this.btnCantidad.TabStop = true;
+            this.btnCantidad.Text = "Cantidad";
+            this.btnCantidad.UseVisualStyleBackColor = true;
+            // 
             // frmCargarVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -303,6 +363,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             this.Consulta.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).EndInit();
+            this.Filtros.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -329,5 +392,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.Button btnListado;
+        private System.Windows.Forms.TabPage Filtros;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton btnCantidad;
+        private System.Windows.Forms.RadioButton optProducto;
+        private System.Windows.Forms.TextBox btnFiltrar;
     }
 }
