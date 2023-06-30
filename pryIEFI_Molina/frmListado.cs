@@ -65,14 +65,19 @@ namespace pryIEFI_Molina
         {
             frmCargarProductos frmCargarProductos = new frmCargarProductos();
             frmCargarProductos.ShowDialog();   
-            this.Close();
+           
         }
 
         private void btnVolverVentas_Click(object sender, EventArgs e)
         {
             frmCargarVentas frmCargarVentas = new frmCargarVentas();    
             frmCargarVentas.ShowDialog();
-            this.Close();
+            
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

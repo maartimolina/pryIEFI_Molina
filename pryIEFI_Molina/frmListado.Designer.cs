@@ -33,6 +33,7 @@
             this.lstVentas = new System.Windows.Forms.ListBox();
             this.btnVolverVentas = new System.Windows.Forms.Button();
             this.btnVolverProductos = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstProductos
@@ -54,7 +55,7 @@
             // btnVolverVentas
             // 
             this.btnVolverVentas.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverVentas.Location = new System.Drawing.Point(391, 364);
+            this.btnVolverVentas.Location = new System.Drawing.Point(422, 363);
             this.btnVolverVentas.Name = "btnVolverVentas";
             this.btnVolverVentas.Size = new System.Drawing.Size(119, 31);
             this.btnVolverVentas.TabIndex = 2;
@@ -65,7 +66,7 @@
             // btnVolverProductos
             // 
             this.btnVolverProductos.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverProductos.Location = new System.Drawing.Point(78, 364);
+            this.btnVolverProductos.Location = new System.Drawing.Point(27, 364);
             this.btnVolverProductos.Name = "btnVolverProductos";
             this.btnVolverProductos.Size = new System.Drawing.Size(132, 31);
             this.btnVolverProductos.TabIndex = 3;
@@ -73,11 +74,23 @@
             this.btnVolverProductos.UseVisualStyleBackColor = true;
             this.btnVolverProductos.Click += new System.EventHandler(this.btnVolverProductos_Click);
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.Location = new System.Drawing.Point(239, 364);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(117, 31);
+            this.btnCerrar.TabIndex = 4;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // frmListado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(596, 407);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnVolverProductos);
             this.Controls.Add(this.btnVolverVentas);
             this.Controls.Add(this.lstVentas);
@@ -98,5 +111,6 @@
         private System.Windows.Forms.ListBox lstVentas;
         private System.Windows.Forms.Button btnVolverVentas;
         private System.Windows.Forms.Button btnVolverProductos;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }
